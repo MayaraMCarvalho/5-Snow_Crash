@@ -12,12 +12,12 @@ This project is a practical introduction to Cybersecurity in a **CTF (Capture Th
 
 ## 📜 Table of Contents
 
-* [Overview](#%EF%B8%8F-overview)
-* [Challenge Structure](#-challenge-structure)
+* [Overview](#-overview)
+* [Challenge Structure](#%EF%B8%8F-challenge-structure)
 * [Tools Used](#%EF%B8%8F-tools-used)
 * [Repository Structure](#-repository-structure)
 * [Usage](#-usage)
-* [Disclaimer](#-disclaimer)
+* [Disclaimer](#%EF%B8%8F-disclaimer)
 * [Author](#-author)
 
 ---
