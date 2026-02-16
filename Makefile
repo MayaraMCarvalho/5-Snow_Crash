@@ -6,7 +6,7 @@
 #    By: macarval <macarval@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/19 16:33:22 by macarval          #+#    #+#              #
-#    Updated: 2026/02/16 15:46:51 by macarval         ###   ########.fr        #
+#    Updated: 2026/02/16 16:41:29 by macarval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ git:
 			clear
 			git add .
 			git status
-			echo "$(YELLOW)Enter the level:"; \
+			@echo "$(YELLOW)Enter the level:"; \
 			read ex; \
 			echo -n "\n"; \
 			echo "$(PURPLE)Choose status:"; \
