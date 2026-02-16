@@ -12,7 +12,7 @@ Este projeto é uma introdução prática à Segurança Cibernética no formato 
 
 ## 📜 Índice
 
-* [Visão Geral](#%EF%B8%8F-vis%C3%A3o-geral)
+* [Visão Geral](#-vis%C3%A3o-geral)
 * [Estrutura do Desafio](#-estrutura-do-desafio)
 * [Ferramentas Utilizadas](#%EF%B8%8F-ferramentas-utilizadas)
 * [Estrutura do Repositório](#-estrutura-do-repositorio)
