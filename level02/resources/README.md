@@ -16,7 +16,7 @@ Além disso, a captura revela o comportamento de digitação do usuário, inclui
 ## 💻 Passos para Exploração (Exploit)
 
 1. **Extração:**
-    Tranferimos o arquivo `level02.pcap` da VM para a máquina local para análise gráfica.
+    Transferimos o arquivo `level02.pcap` da VM para a máquina local para análise gráfica.
 
     ```bash
     # No computador local (Host):
@@ -24,44 +24,41 @@ Além disso, a captura revela o comportamento de digitação do usuário, inclui
     ```
 
 2. **Identificação do arquivo:**
-    Para identificar o tipo de arquivo que encontramos.
+    Para confirmar o tipo de arquivo que encontramos, usamos o comando `file`:
 
     ```bash
     file level02.pcap
-
-    level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216)
+    # Saída: level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216)
     ```
 
 3. **Análise com Wireshark:**
     Abrimos o arquivo no Wireshark, em Analisar selecionamos `level02.pcap`.
     1. Clicamos com o botão direito em um dos pacotes TCP.
-    2. Selecionamos **Seguir -> Fluxo TCP**.
-    Isso reconstrói a conversa inteira entre o cliente e o servidor.
+    2. Selecionamos **Follow -> TCP Stream (Seguir -> Fluxo TCP)**.
+
+    Isso reconstrói a conversa inteira entre o cliente e o servidor. Visualisamos o seguinte:
 
     ```plaintext
     Password:
-    ft_wandrNDRelL0L
+    ft_wandr...NDRel.L0L
     ```
+    > *Os pontos representam caracteres não imprimíveis na interface.*
 
 4. **Reconstrução da Senha:**
-    No fluxo TCP, visualizamos a tentativa de login.
-    Vemos o servidor pedindo `Password:`.
-    A resposta do usuário parece ser `ft_wandrNDRelL0L` (com esses caracteres estranhos)
-
-    **Problema Identificado:**
     Ao verificar a representação **Hexdump** (dados brutos) dentro do Wireshark, notamos o byte `7f`.
     * `7f` em ASCII é o código para **DELETE (DEL)**.
     * Isso significa que o usuário errou a senha enquanto digitava e pressionou "Backspace".
+    Devemos aplicar essa ação para revelar a senha real.
 
     **Senha Final Reconstruída:**
-    `ft_wandrNDRelL0L`
+    `ft_waNDReL0L`
 
 ## 🚩 Solução / Flag
 Com a senha decifrada, logamos na conta `flag02` e capturamos o token final.
 
 ```bash
 su flag02
-# Inserir a senha decifrada: `ft_wandrNDRelL0L`
+# Inserir a senha decifrada: `ft_waNDReL0L`
 getflag
 ```
 
