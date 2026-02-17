@@ -5,7 +5,7 @@ Available in: [🇺🇸 English](README.en.md)
 
 ![42 São Paulo](https://img.shields.io/badge/42-São_Paulo-black)
 ![Security](https://img.shields.io/badge/Focus-Cybersecurity-red)
-![Language](https://img.shields.io/badge/Language-C_/_ASM_/_Python_/_Perl-blue)
+![Language](https://img.shields.io/badge/Language-C_/_ASM_/_Python-blue)
 ![Status](https://img.shields.io/badge/Status-In_Progress-yellow)
 
 Este projeto é uma introdução prática à Segurança Cibernética no formato **CTF (Capture The Flag)**. O objetivo é explorar vulnerabilidades em um sistema Linux para escalar privilégios, nível por nível, utilizando técnicas de engenharia reversa, exploração de binários e scripting.
@@ -98,8 +98,8 @@ Seguindo as normas da 42, este repositório contém uma pasta para cada nível r
 Abaixo está um resumo dos conceitos abordados em cada nível completado:
 
 | Nível | Tipo de Vulnerabilidade / Conceito Chave | Status
-|--- |--- |--- |
-| **00** | _Find / Basic Linux Commands_ | ⏳
+| :---: | :--- | :---: |
+| **00** | _Find / Basic Linux Commands_ | ✅
 | **01** | _Vulnerabilidade a definir_ | ⏳
 | **02** | _Vulnerabilidade a definir_ | ⏳
 | **03** | _Vulnerabilidade a definir_ | ⏳

@@ -1,15 +1,15 @@
 # Level XX
 
-## Objetivo
+## 🎯 Objetivo
 Descrever brevemente o que encontramos ao logar neste nível (ex: um executável SUID, um script perl, um arquivo pcap).
 
-## Análise da Vulnerabilidade
+## 🔍 Análise da Vulnerabilidade
 Explique aqui qual foi a falha encontrada.
 * **Tipo:** (Ex: Stack Buffer Overflow, Command Injection, Race Condition).
 * **Arquivo Alvo:** `/home/user/levelXX/binario`
 * **Comportamento:** O programa usa a função `strcpy` sem verificar o tamanho da entrada... (explique tecnicamente).
 
-## Passos para Exploração (Exploit)
+## 💻 Passos para Exploração (Exploit)
 
 1.  **Reconhecimento:**
     Identificamos que o binário tem permissão SUID para o usuário `flagXX`.
@@ -28,16 +28,16 @@ Explique aqui qual foi a falha encontrada.
     (python -c 'print "A"*76 + "\xef\xbe\xad\xde"') | ./levelXX
     ```
 
-## Scripts Utilizados
+## 📜 Scripts Utilizados
 Se você criou um script python ou bash para automatizar, coloque-o na pasta `resources` e referencie aqui.
 
 * `resources/exploit.py`: Script que gera a string maliciosa.
 
-## Solução / Flag
+## 🚩 Solução / Flag
 (Opcional, mas útil para referência futura. Não coloque a flag literal se preferir, mas sim a senha obtida).
 
 Senha para o próximo nível: `xxxxxxxxxxxx`
 
-## Prevenção (Teoria)
+## 🛡️ Prevenção (Teoria)
 Como esse código deveria ter sido escrito para ser seguro?
 * *Exemplo:* Deveria ter sido usada a função `strncpy` ao invés de `strcpy` para limitar o tamanho da cópia.
