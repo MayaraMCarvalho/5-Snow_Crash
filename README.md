@@ -97,19 +97,19 @@ Seguindo as normas da 42, este repositório contém uma pasta para cada nível r
 
 Abaixo está um resumo dos conceitos abordados em cada nível completado:
 
-| Nível | Tipo de Vulnerabilidade / Conceito Chave | Status
+| Nível | Tipo de Vulnerabilidade / Conceito Chave | Status |
 | :---: | :--- | :---: |
-| **00** | _Find / Basic Linux Commands_ | ✅
-| **01** | _Vulnerabilidade a definir_ | ⏳
-| **02** | _Vulnerabilidade a definir_ | ⏳
-| **03** | _Vulnerabilidade a definir_ | ⏳
-| **04** | _Vulnerabilidade a definir_ | ⏳
-| **05** | _Vulnerabilidade a definir_ | ⏳
-| **06** | _Vulnerabilidade a definir_ | ⏳
-| **07** | _Vulnerabilidade a definir_ | ⏳
-| **08** | _Vulnerabilidade a definir_ | ⏳
-| **09** | _Vulnerabilidade a definir_ | ⏳
-| **10** | _+Níveis Bônus (Hardcore)_ | 🔒
+| **00** | _Find / Basic Linux Commands_ | ✅ |
+| **01** | _Vulnerabilidade a definir_ | ✅ |
+| **02** | _Vulnerabilidade a definir_ | ✅ |
+| **03** | _Vulnerabilidade a definir_ | ⏳ |
+| **04** | _Vulnerabilidade a definir_ | ⏳ |
+| **05** | _Vulnerabilidade a definir_ | ⏳ |
+| **06** | _Vulnerabilidade a definir_ | ⏳ |
+| **07** | _Vulnerabilidade a definir_ | ⏳ |
+| **08** | _Vulnerabilidade a definir_ | ⏳ |
+| **09** | _Vulnerabilidade a definir_ | ⏳ |
+| **10** | _+Níveis Bônus (Hardcore)_ | 🔒 |
 
 > Nota: A tabela será atualizada conforme o progresso no projeto.
 

@@ -17,7 +17,7 @@ Isso expõe o hash da senha para qualquer usuário do sistema, permitindo um ata
 
 ## 💻 Passos para Exploração (Exploit)
 
-1.  **Reconhecimento:**
+1. **Reconhecimento:**
     Inspecionamos o arquivo de usuários para entender a estrutura do sistema.
 
     ```bash
@@ -33,12 +33,12 @@ Isso expõe o hash da senha para qualquer usuário do sistema, permitindo um ata
     ```
     A string `42hDRfypTqqnw` é o hash da senha.
 
-2.  **Identificação do Hash:**
+2. **Identificação do Hash:**
     Pelo formato curto e pelos caracteres utilizados, identificamos que se trata de um hash **DES (Unix Crypt)** padrão antigo.
     * **Hash**: 42hDRfypTqqnw
     * **Salt**: 42 (os dois primeiros caracteres no DES padrão).
 
-3.  **Cracking (Quebra da Senha):**
+3. **Cracking (Quebra da Senha):**
     Como temos o hash e o salt, podemos usar uma ferramenta de força bruta como o **John the Ripper**.
 
     Utilizando o **John the Ripper** (ferramenta padrão em CTFs):
@@ -60,11 +60,11 @@ Isso expõe o hash da senha para qualquer usuário do sistema, permitindo um ata
 ## 🚩 Solução / Flag
 Com a senha decifrada, logamos na conta `flag01` e capturamos o token final.
 
-    ```bash
-    su flag01
-    # Inserir a senha decifrada: `abcdefg`
-    getflag
-    ```
+```bash
+su flag01
+# Inserir a senha decifrada: `abcdefg`
+getflag
+```
 
 Senha para o próximo nível: `abcdefg`
 

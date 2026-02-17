@@ -1,43 +1,70 @@
-# Level XX
+# Level 02
 
 ## 🎯 Objetivo
-Descrever brevemente o que encontramos ao logar neste nível (ex: um executável SUID, um script perl, um arquivo pcap).
+O objetivo deste nível é recuperar uma senha interceptada em uma captura de tráfego de rede antiga. O desafio envolve análise de pacotes (Packet Analysis) e reconstrução de fluxo TCP.
 
 ## 🔍 Análise da Vulnerabilidade
-Explique aqui qual foi a falha encontrada.
-* **Tipo:** (Ex: Stack Buffer Overflow, Command Injection, Race Condition).
-* **Arquivo Alvo:** `/home/user/levelXX/binario`
-* **Comportamento:** O programa usa a função `strcpy` sem verificar o tamanho da entrada... (explique tecnicamente).
+
+* **Tipo:** Protocolo Não Criptografado (Cleartext Protocol) / Sniffing.
+* **Arquivo Alvo:** `level02.pcap` (Packet Capture)
+* **Ferramenta:** Wireshark.
+
+A vulnerabilidade reside no uso de um protocolo de comunicação inseguro (**Telnet** antigo) que transmite dados, incluindo credenciais de login, em texto plano (cleartext). Diferente do SSH (que é encriptado), tudo o que passa pelo fio no Telnet pode ser lido por qualquer pessoa que esteja "escutando" a rede (Man-in-the-Middle).
+
+Além disso, a captura revela o comportamento de digitação do usuário, incluindo erros e correções (backspaces).
 
 ## 💻 Passos para Exploração (Exploit)
 
-1.  **Reconhecimento:**
-    Identificamos que o binário tem permissão SUID para o usuário `flagXX`.
-    Comando: `ls -l`
+1. **Extração:**
+    Tranferimos o arquivo `level02.pcap` da VM para a máquina local para análise gráfica.
 
-2.  **Debugging (se aplicável):**
-    Encontramos o offset de memória 76 usando o GDB pattern create...
-    Endereço do buffer: `0xbffff...`
-
-3.  **Payload:**
-    Criamos um payload contendo:
-    `[Padding] + [Endereço de Retorno] + [NOP Sled] + [Shellcode]`
-
-    Comando exato utilizado:
     ```bash
-    (python -c 'print "A"*76 + "\xef\xbe\xad\xde"') | ./levelXX
+    # No computador local (Host):
+    scp -P 4242 level02@<IP_VM>:level02.pcap .
     ```
 
-## 📜 Scripts Utilizados
-Se você criou um script python ou bash para automatizar, coloque-o na pasta `resources` e referencie aqui.
+2. **Identificação do arquivo:**
+    Para identificar o tipo de arquivo que encontramos.
 
-* `resources/exploit.py`: Script que gera a string maliciosa.
+    ```bash
+    file level02.pcap
+
+    level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216)
+    ```
+
+3. **Análise com Wireshark:**
+    Abrimos o arquivo no Wireshark, em Analisar selecionamos `level02.pcap`.
+    1. Clicamos com o botão direito em um dos pacotes TCP.
+    2. Selecionamos **Seguir -> Fluxo TCP**.
+    Isso reconstrói a conversa inteira entre o cliente e o servidor.
+
+    ```plaintext
+    Password:
+    ft_wandrNDRelL0L
+    ```
+
+4. **Reconstrução da Senha:**
+    No fluxo TCP, visualizamos a tentativa de login.
+    Vemos o servidor pedindo `Password:`.
+    A resposta do usuário parece ser `ft_wandrNDRelL0L` (com esses caracteres estranhos)
+
+    **Problema Identificado:**
+    Ao verificar a representação **Hexdump** (dados brutos) dentro do Wireshark, notamos o byte `7f`.
+    * `7f` em ASCII é o código para **DELETE (DEL)**.
+    * Isso significa que o usuário errou a senha enquanto digitava e pressionou "Backspace".
+
+    **Senha Final Reconstruída:**
+    `ft_wandrNDRelL0L`
 
 ## 🚩 Solução / Flag
-(Opcional, mas útil para referência futura. Não coloque a flag literal se preferir, mas sim a senha obtida).
+Com a senha decifrada, logamos na conta `flag02` e capturamos o token final.
 
-Senha para o próximo nível: `xxxxxxxxxxxx`
+```bash
+su flag02
+# Inserir a senha decifrada: `ft_wandrNDRelL0L`
+getflag
+```
 
 ## 🛡️ Prevenção (Teoria)
-Como esse código deveria ter sido escrito para ser seguro?
-* *Exemplo:* Deveria ter sido usada a função `strncpy` ao invés de `strcpy` para limitar o tamanho da cópia.
+1. **Use Criptografia**: Nunca utilize protocolos de texto plano como Telnet, FTP ou HTTP para transmitir credenciais. Sempre utilize suas verões seguras: **SSH**, **SFTP** e **HTTPS**.
+2. **VPNs**: Se for necessário usar protocolos legados inseguros, eles devem ser encapsulados dentro de um túnel VPN criptografado.

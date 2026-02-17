@@ -71,11 +71,11 @@ O script itera por um `range(26)`, representando todas as rotações possíveis 
 
 Com a senha decifrada, logamos na conta `flag00` e capturamos o token final.
 
-    ```bash
-    su flag00
-    # Inserir a senha decifrada: `nottoohardhere`
-    getflag
-    ```
+```bash
+su flag00
+# Inserir a senha decifrada: `nottoohardhere`
+getflag
+```
 
 Senha para o próximo nível: `nottoohardhere`
 
