@@ -6,7 +6,7 @@
 #    By: macarval <macarval@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/19 16:33:22 by macarval          #+#    #+#              #
-#    Updated: 2026/02/16 17:09:26 by macarval         ###   ########.fr        #
+#    Updated: 2026/02/16 22:15:01 by macarval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ git:
 			read msg; \
 			echo -n "\n"; \
 			echo "$(BLUE)"; \
-			git commit -m "[($$NAME)]: level$$ex - ($$status) $$msg"; \
+			git commit -m "[$(NAME)]: level$$ex - ($$status) $$msg"; \
 			git push
 
 .PHONY:		git
