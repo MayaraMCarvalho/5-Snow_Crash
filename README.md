@@ -99,9 +99,9 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 
 | Nível | Tipo de Vulnerabilidade / Conceito Chave | Status |
 | :---: | :--- | :---: |
-| **00** | _Find / Basic Linux Commands_ | ✅ |
-| **01** | _Vulnerabilidade a definir_ | ✅ |
-| **02** | _Vulnerabilidade a definir_ | ✅ |
+| **00** | _Exposição de Dados Sensíveis_ | ✅ |
+| **01** | _Armazenamento Inseguro de Senha_ | ✅ |
+| **02** | _Protocolos em Texto Plano_ | ✅ |
 | **03** | _Vulnerabilidade a definir_ | ⏳ |
 | **04** | _Vulnerabilidade a definir_ | ⏳ |
 | **05** | _Vulnerabilidade a definir_ | ⏳ |

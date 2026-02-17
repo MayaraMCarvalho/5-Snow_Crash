@@ -99,9 +99,9 @@ Below is a summary of the concepts covered in each completed level:
 
 | Level | Vulnerability Type / Key Concept | Status |
 | :---: | :--- | :---: |
-| **00** | _Find / Basic Linux Commands_ | ✅ |
-| **01** | _Vulnerability to be defined_ | ✅ |
-| **02** | _Vulnerability to be defined_ | ✅ |
+| **00** | _Sensitive Data Exposure_ | ✅ |
+| **01** | _Weak Password Storage_ | ✅ |
+| **02** | _Cleartext Protocols / Network Sniffing_ | ✅ |
 | **03** | _Vulnerability to be defined_ | ⏳ |
 | **04** | _Vulnerability to be defined_ | ⏳ |
 | **05** | _Vulnerability to be defined_ | ⏳ |
