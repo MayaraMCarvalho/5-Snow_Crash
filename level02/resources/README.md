@@ -20,7 +20,7 @@ Além disso, a captura revela o comportamento de digitação do usuário, inclui
 
     ```bash
     # No computador local (Host):
-    scp -P 4242 level02@<IP_VM>:level02.pcap .
+    scp -P 4242 level02@<IP_VM>:level02.pcap level02.pcap
     ```
 
 2. **Identificação do arquivo:**

@@ -5,13 +5,11 @@ O objetivo deste nível é obter acesso ao usuário `flag00`. Para isso, precisa
 
 ## 🔍 Análise da Vulnerabilidade
 
-**Tipo:** Exposição de Informação Sensível (Sensitive Information Exposure) / Permissões de Arquivo Inseguras.
-
+* **Tipo:** Exposição de Informação Sensível (Sensitive Information Exposure) / Permissões de Arquivo Inseguras.
 * **Arquivo Alvo:** `/usr/sbin/john`
     ```bash
     ----r--r-- 1 flag00 flag00 15 Mar  5  2016 /usr/sbin/john
     ```
-
 * **Comportamento:** A vulnerabilidade consiste no fato de que um arquivo pertencente ao usuário alvo (`flag00`) foi deixado no sistema com permissões de leitura para "outros" (world-readable). Isso permite que qualquer usuário logado no sistema (neste caso, `level00`) leia seu conteúdo.
 
 Além disso, o conteúdo do arquivo estava ofuscado com uma cifra de substituição simples, o que não constitui uma proteção real de segurança ("Security by Obscurity").

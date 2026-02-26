@@ -99,10 +99,10 @@ Below is a summary of the concepts covered in each completed level:
 
 | Level | Vulnerability Type / Key Concept | Status |
 | :---: | :--- | :---: |
-| **00** | _Sensitive Data Exposure_ | ✅ |
-| **01** | _Weak Password Storage_ | ✅ |
-| **02** | _Cleartext Protocols / Network Sniffing_ | ✅ |
-| **03** | _Vulnerability to be defined_ | ⏳ |
+| **00** | _Sensitive Data Exposure / Permissions_ | ✅ |
+| **01** | _Weak Password Storage (Legacy Shadow)_ | ✅ |
+| **02** | _Cleartext Protocols / Packet Sniffing_ | ✅ |
+| **03** | _PATH Hijacking / Insecure SUID_ | ✅ |
 | **04** | _Vulnerability to be defined_ | ⏳ |
 | **05** | _Vulnerability to be defined_ | ⏳ |
 | **06** | _Vulnerability to be defined_ | ⏳ |
