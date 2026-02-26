@@ -1,4 +1,4 @@
-# Level 𝟘𝟘
+# 𝕃𝕖𝕧𝕖𝕝 𝟘𝟘
 
 ## 🎯 Objetivo
 O objetivo deste nível é obter acesso ao usuário `flag00`. Para isso, precisamos encontrar onde a senha ou um método de escalação de privilégio foi deixado no sistema.

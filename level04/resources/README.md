@@ -1,4 +1,4 @@
-# Level 𝟘𝟜
+# 𝕃𝕖𝕧𝕖𝕝 𝟘𝟜
 
 ## 🎯 Objetivo
 O objetivo deste nível é explorar um script Perl (CGI) que está rodando em segundo plano como um serviço web, conseguindo executar comandos arbitrários no sistema (Remote Code Execution) para obter a flag.

@@ -1,4 +1,4 @@
-# Level 𝟘𝟝
+# 𝕃𝕖𝕧𝕖𝕝 𝟘𝟝
 
 ## 🎯 Objetivo
 O objetivo deste nível é explorar uma tarefa agendada do sistema (Cron Job) mal configurada, que executa cegamente arquivos colocados em um diretório público, permitindo a Execução Arbitrária de Código (Arbitrary Code Execution).

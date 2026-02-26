@@ -1,4 +1,4 @@
-# Level 𝟘𝟙
+# 𝕃𝕖𝕧𝕖𝕝 𝟘𝟙
 
 ## 🎯 Objetivo
 O objetivo deste nível é obter a senha do usuário `flag01`. Nesse nível, será exploarada uma falha na configuração de armazenamento de credenciais do sistema.
