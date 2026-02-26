@@ -104,7 +104,7 @@ Below is a summary of the concepts covered in each completed level:
 | **02** | _Cleartext Protocols / Packet Sniffing_ | ✅ |
 | **03** | _PATH Hijacking / Insecure SUID_ | ✅ |
 | **04** | _OS Command Injection / Insecure CGI_ | ✅ |
-| **05** | _Vulnerability to be defined_ | ⏳ |
+| **05** | _Insecure Cron Job / Arbitrary Code Execution_ | ✅ |
 | **06** | _Vulnerability to be defined_ | ⏳ |
 | **07** | _Vulnerability to be defined_ | ⏳ |
 | **08** | _Vulnerability to be defined_ | ⏳ |

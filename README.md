@@ -104,7 +104,7 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 | **02** | _Protocolos em Texto Plano / Captura de Pacotes_ | ✅ |
 | **03** | _PATH inseguro/Sequestro de SUID_ | ✅ |
 | **04** | _Injeção de comandos do sistema operacional / CGI inseguro_ | ✅ |
-| **05** | _Vulnerabilidade a definir_ | ⏳ |
+| **05** | _Tarefa Cron Insegura / Execução Arbitrária de Código_ | ✅ |
 | **06** | _Vulnerabilidade a definir_ | ⏳ |
 | **07** | _Vulnerabilidade a definir_ | ⏳ |
 | **08** | _Vulnerabilidade a definir_ | ⏳ |
