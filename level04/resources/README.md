@@ -69,4 +69,4 @@ A resposta da requisição web executou o binário e nos devolveu diretamente o 
 ## 🛡️ Prevenção (Como corrigir)
 1. **Sanitização de Input**: Nunca confie na entrada do usuário (User Input). Todos os dados recebidos via GET/POST devem ser rigorosamente validados, filtrados e escapados antes de serem usados em qualquer contexto do sistema.
 
-
+2. **Evitar Chamadas de Sistema Inseguras**: Em vez de usar crases (``` ` ```) ou funções como `system()` e `exec()` para tarefas simples (como imprimir um texto), utilize as funções nativas e seguras da própria linguagem. No caso deste script, o correto seria usar apenas print $y; sem invocar o binário /bin/echo do Linux.
