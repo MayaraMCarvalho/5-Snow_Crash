@@ -1,4 +1,4 @@
-# Level XX
+# Level 𝟘𝟞
 
 ## 🎯 Objetivo
 Descrever brevemente o que encontramos ao logar neste nível (ex: um executável SUID, um script perl, um arquivo pcap).

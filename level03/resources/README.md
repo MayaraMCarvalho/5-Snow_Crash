@@ -1,4 +1,4 @@
-# Level 03
+# Level 𝟘𝟛
 
 ## 🎯 Objetivo
 O objetivo deste nível é escalar privilégios aproveitando-se de um arquivo executável que possui a permissão SUID ativada e que faz chamadas de sistema inseguras.

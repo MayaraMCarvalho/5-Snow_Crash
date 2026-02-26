@@ -1,4 +1,4 @@
-# Level 04
+# Level 𝟘𝟜
 
 ## 🎯 Objetivo
 O objetivo deste nível é explorar um script Perl (CGI) que está rodando em segundo plano como um serviço web, conseguindo executar comandos arbitrários no sistema (Remote Code Execution) para obter a flag.
@@ -67,5 +67,6 @@ O objetivo deste nível é explorar um script Perl (CGI) que está rodando em se
 A resposta da requisição web executou o binário e nos devolveu diretamente o token final.
 
 ## 🛡️ Prevenção (Como corrigir)
-Como esse código deveria ter sido escrito para ser seguro?
-* *Exemplo:* Deveria ter sido usada a função `strncpy` ao invés de `strcpy` para limitar o tamanho da cópia.
+1. **Sanitização de Input**: Nunca confie na entrada do usuário (User Input). Todos os dados recebidos via GET/POST devem ser rigorosamente validados, filtrados e escapados antes de serem usados em qualquer contexto do sistema.
+
+
