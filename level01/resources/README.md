@@ -68,7 +68,7 @@ getflag
 
 Senha para o próximo nível: `abcdefg`
 
-## 🛡️ Prevenção (Teoria)
+## 🛡️ Prevenção (Como corrigir)
 
 1. **Shadow Suite**: Garantir que o sistema utilize a suite `shadow` corretamente. No arquivo `/etc/passwd`, o campo de senha deve conter apenas um `x`.
 

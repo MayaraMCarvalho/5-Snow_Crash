@@ -38,6 +38,6 @@ Se você criou um script python ou bash para automatizar, coloque-o na pasta `re
 
 Senha para o próximo nível: `xxxxxxxxxxxx`
 
-## 🛡️ Prevenção (Teoria)
+## 🛡️ Prevenção (Como corrigir)
 Como esse código deveria ter sido escrito para ser seguro?
 * *Exemplo:* Deveria ter sido usada a função `strncpy` ao invés de `strcpy` para limitar o tamanho da cópia.

@@ -103,7 +103,7 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 | **01** | _Armazenamento Inseguro de Senha (Legacy Shadow)_ | ✅ |
 | **02** | _Protocolos em Texto Plano / Captura de Pacotes_ | ✅ |
 | **03** | _PATH inseguro/Sequestro de SUID_ | ✅ |
-| **04** | _Vulnerabilidade a definir_ | ⏳ |
+| **04** | _Injeção de comandos do sistema operacional / CGI inseguro_ | ✅ |
 | **05** | _Vulnerabilidade a definir_ | ⏳ |
 | **06** | _Vulnerabilidade a definir_ | ⏳ |
 | **07** | _Vulnerabilidade a definir_ | ⏳ |

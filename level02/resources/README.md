@@ -62,6 +62,6 @@ su flag02
 getflag
 ```
 
-## 🛡️ Prevenção (Teoria)
+## 🛡️ Prevenção (Como corrigir)
 1. **Use Criptografia**: Nunca utilize protocolos de texto plano como Telnet, FTP ou HTTP para transmitir credenciais. Sempre utilize suas verões seguras: **SSH**, **SFTP** e **HTTPS**.
 2. **VPNs**: Se for necessário usar protocolos legados inseguros, eles devem ser encapsulados dentro de um túnel VPN criptografado.

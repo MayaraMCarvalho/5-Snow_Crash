@@ -53,7 +53,7 @@ Inspecionando o binário, descobrimos que ele executa internamente o comando `/u
 ## 🚩 Solução / Flag
 A execução do binário com o PATH sequestrado nos devolve diretamente o token de acesso. Assim, neste level não é necessário logar na conta (`su flag03`) para rodar o `getflag` manualmente, pois o próprio binário vulnerável já executou o comando com os privilégios elevados.
 
-## 🛡️ Prevenção (Teoria)
+## 🛡️ Prevenção (Como corrigir)
 1. **Uso de Caminhos Absolutos**: Ao programar em C, Bash ou qualquer linguagem que interaja com o sistema operacional, nunca chame binários por caminhos relativos (ex: `echo`, `ls`). Sempre utilize o caminho absoluto (ex: `/bin/echo`, `/bin/ls`).
 
 2. **Sanitização de Ambiente**: Programas com SUID devem limpar ou redefinir variáveis de ambiente críticas (como o `PATH`) logo no início da execução, garantindo que não sejam manipulados pelo usuário que os invoca.
