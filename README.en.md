@@ -105,7 +105,7 @@ Below is a summary of the concepts covered in each completed level:
 | **03** | _PATH Hijacking / Insecure SUID_ | ✅ |
 | **04** | _OS Command Injection / Insecure CGI_ | ✅ |
 | **05** | _Insecure Cron Job / Arbitrary Code Execution_ | ✅ |
-| **06** | _Vulnerability to be defined_ | ⏳ |
+| **06** | _Code Injection / PHP preg_replace() /e Modifier_ | ✅ |
 | **07** | _Vulnerability to be defined_ | ⏳ |
 | **08** | _Vulnerability to be defined_ | ⏳ |
 | **09** | _Vulnerability to be defined_ | ⏳ |
