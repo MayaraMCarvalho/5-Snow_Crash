@@ -107,9 +107,13 @@ Below is a summary of the concepts covered in each completed level:
 | **05** | _Insecure Cron Job / Arbitrary Code Execution_ | ✅ |
 | **06** | _Code Injection / PHP preg_replace() /e Modifier_ | ✅ |
 | **07** | _OS Command Injection via Environment Variable ($LOGNAME)_ | ✅ |
-| **08** | _Vulnerability to be defined_ | ⏳ |
+| **08** | _Insecure Filename Check / Symlink Bypass_ | ✅ |
 | **09** | _Vulnerability to be defined_ | ⏳ |
-| **10** | _+Bonus Levels (Hardcore)_ | 🔒 |
+| **10** | _Vulnerability to be defined_ | ⏳ |
+| **11** | _Vulnerability to be defined_ | ⏳ |
+| **12** | _Vulnerability to be defined_ | ⏳ |
+| **13** | _Vulnerability to be defined_ | ⏳ |
+| **14** | _Vulnerability to be defined_ | ⏳ |
 
 > Note: The table will be updated as the project progresses.
 

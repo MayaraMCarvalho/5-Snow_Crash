@@ -107,9 +107,13 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 | **05** | _Tarefa Cron Insegura / Execução Arbitrária de Código_ | ✅ |
 | **06** | _Injeção de código / Modificador PHP preg_replace() /e_ | ✅ |
 | **07** | _Injeção de comandos do sistema operacional via variável de ambiente ($LOGNAME)_ | ✅ |
-| **08** | _Vulnerabilidade a definir_ | ⏳ |
+| **08** | _Verificação de nome de arquivo inseguro / Ignorar link simbólico_ | ✅ |
 | **09** | _Vulnerabilidade a definir_ | ⏳ |
-| **10** | _+Níveis Bônus (Hardcore)_ | 🔒 |
+| **10** | _Vulnerabilidade a definir_ | ⏳ |
+| **11** | _Vulnerabilidade a definir_ | ⏳ |
+| **12** | _Vulnerabilidade a definir_ | ⏳ |
+| **13** | _Vulnerabilidade a definir_ | ⏳ |
+| **14** | _Vulnerabilidade a definir_ | ⏳ |
 
 > Nota: A tabela será atualizada conforme o progresso no projeto.
 
