@@ -106,7 +106,7 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 | **04** | _Injeção de comandos do sistema operacional / CGI inseguro_ | ✅ |
 | **05** | _Tarefa Cron Insegura / Execução Arbitrária de Código_ | ✅ |
 | **06** | _Injeção de código / Modificador PHP preg_replace() /e_ | ✅ |
-| **07** | _Vulnerabilidade a definir_ | ⏳ |
+| **07** | _Injeção de comandos do sistema operacional via variável de ambiente ($LOGNAME)_ | ✅ |
 | **08** | _Vulnerabilidade a definir_ | ⏳ |
 | **09** | _Vulnerabilidade a definir_ | ⏳ |
 | **10** | _+Níveis Bônus (Hardcore)_ | 🔒 |

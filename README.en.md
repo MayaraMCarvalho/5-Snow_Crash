@@ -106,7 +106,7 @@ Below is a summary of the concepts covered in each completed level:
 | **04** | _OS Command Injection / Insecure CGI_ | ✅ |
 | **05** | _Insecure Cron Job / Arbitrary Code Execution_ | ✅ |
 | **06** | _Code Injection / PHP preg_replace() /e Modifier_ | ✅ |
-| **07** | _Vulnerability to be defined_ | ⏳ |
+| **07** | _OS Command Injection via Environment Variable ($LOGNAME)_ | ✅ |
 | **08** | _Vulnerability to be defined_ | ⏳ |
 | **09** | _Vulnerability to be defined_ | ⏳ |
 | **10** | _+Bonus Levels (Hardcore)_ | 🔒 |
