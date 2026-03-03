@@ -5,7 +5,7 @@ O objetivo deste nível é obter a senha do usuário `flag01`. Nesse nível, ser
 
 ## 🔍 Análise da Vulnerabilidade
 
-* **Tipo:** Armazenamento Inseguro de Credenciais (Insecure Credential Storage) / Hash Legado.
+* **Tipo:** *Armazenamento Inseguro de Credenciais* (Insecure Credential Storage) / *Hash Legado*.
 * **Arquivo Alvo:** `/etc/passwd`
 * **Comportamento:** O sistema Linux moderno utiliza dois arquivos para gerenciar usuários:
     1. `/etc/passwd`: Contém informações públicas do usuário (UID, GID, Home, Shell). Deve ser legível por todos (`world-readable`).

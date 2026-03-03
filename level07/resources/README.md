@@ -1,11 +1,11 @@
 # 𝕃𝕖𝕧𝕖𝕝 𝟘𝟟
 
 ## 🎯 Objetivo
-O objetivo deste nível é escalar privilégios abusando de um binário SUID que constrói e executa comandos do sistema baseados em variáveis de ambiente (Environment Variables) não sanitizadas.
+O objetivo deste nível é recuperar a senha original descriptografando um arquivo de texto que foi ofuscado por um algoritmo de substituição customizado em um binário.
 
 ## 🔍 Análise da Vulnerabilidade
 
-* **Tipo:** *OS Command Injection* (Injeção de Comando) / *Insecure Environment Variable Usage*.
+* **Tipo:** *Custom/Weak Cryptography* (Criptografia Fraca/Customizada) e *Reverse Engineering* (Engenharia Reversa).
 * **Arquivo Alvo:** `level07` (Executável SUID em C).
 * **Comportamento:** Através de engenharia reversa dinâmica usando `ltrace`, observamos o comportamento interno do binário. O programa faz uma chamada para `getenv("LOGNAME")` para capturar o nome do usuário logado no sistema e, em seguida, formata essa string (usando `asprintf`) para jogá-la dentro de uma função `system()`.
 

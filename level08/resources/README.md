@@ -5,7 +5,7 @@ O objetivo deste nível é ler o conteúdo de um arquivo restrito (`token`), con
 
 ## 🔍 Análise da Vulnerabilidade
 
-* **Tipo:** Insecure Filename Check (Verificação de Arquivo Insegura) / Symlink Bypass (Bypass por Link Simbólico).
+* **Tipo:** *Insecure Filename Check* (Verificação de Arquivo Insegura) / *Symlink Bypass* (Bypass por Link Simbólico).
 * **Arquivo Alvo:** `level08` (Executável SUID em C) e o arquivo `token`.
 * **Comportamento:** O binário `level08` age como um leitor de arquivos executado com privilégios elevados. Para tentar "proteger" o arquivo `token`, o desenvolvedor implementou uma verificação de string simples. O programa verifica se a palavra "token" está presente no argumento digitado pelo usuário. Se estiver, a leitura é bloqueada.
 

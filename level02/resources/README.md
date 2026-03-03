@@ -5,7 +5,7 @@ O objetivo deste nível é recuperar uma senha interceptada em uma captura de tr
 
 ## 🔍 Análise da Vulnerabilidade
 
-* **Tipo:** Protocolo Não Criptografado (Cleartext Protocol) / Sniffing.
+* **Tipo:** *Protocolo Não Criptografado* (Cleartext Protocol) / *Sniffing*.
 * **Arquivo Alvo:** `level02.pcap` (Packet Capture)
 * **Ferramenta:** Wireshark.
 
