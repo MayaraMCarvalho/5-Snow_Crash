@@ -108,7 +108,7 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 | **06** | _Injeção de código / Modificador PHP preg_replace() /e_ | ✅ |
 | **07** | _Injeção de comandos do sistema operacional via variável de ambiente ($LOGNAME)_ | ✅ |
 | **08** | _Verificação de nome de arquivo inseguro / Ignorar link simbólico_ | ✅ |
-| **09** | _Vulnerabilidade a definir_ | ⏳ |
+| **09** | _Criptografia Fraca Customizada / Engenharia Reversa_ | ✅ |
 | **10** | _Vulnerabilidade a definir_ | ⏳ |
 | **11** | _Vulnerabilidade a definir_ | ⏳ |
 | **12** | _Vulnerabilidade a definir_ | ⏳ |
