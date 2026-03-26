@@ -110,7 +110,7 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 | **08** | _Verificação de nome de arquivo inseguro / Ignorar link simbólico_ | ✅ |
 | **09** | _Criptografia Fraca Customizada / Engenharia Reversa_ | ✅ |
 | **10** | _Race Condition / TOCTOU (Hora da verificação até a hora de uso)_ | ✅ |
-| **11** | _Vulnerabilidade a definir_ | ⏳ |
+| **11** | _Injeção de Comando Cega (Blind OS Command Injection) / Lua_ | ✅ |
 | **12** | _Vulnerabilidade a definir_ | ⏳ |
 | **13** | _Vulnerabilidade a definir_ | ⏳ |
 | **14** | _Vulnerabilidade a definir_ | ⏳ |

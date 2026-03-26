@@ -110,7 +110,7 @@ Below is a summary of the concepts covered in each completed level:
 | **08** | _Insecure Filename Check / Symlink Bypass_ | ✅ |
 | **09** | _Custom Weak Cryptography / Reverse Engineering_ | ✅ |
 | **10** | _Race Condition / TOCTOU (Time-of-Check to Time-of-Use)_ | ✅ |
-| **11** | _Vulnerability to be defined_ | ⏳ |
+| **11** | _Blind OS Command Injection / Insecure Lua Script_ | ✅ |
 | **12** | _Vulnerability to be defined_ | ⏳ |
 | **13** | _Vulnerability to be defined_ | ⏳ |
 | **14** | _Vulnerability to be defined_ | ⏳ |
