@@ -111,7 +111,7 @@ Below is a summary of the concepts covered in each completed level:
 | **09** | _Custom Weak Cryptography / Reverse Engineering_ | ✅ |
 | **10** | _Race Condition / TOCTOU (Time-of-Check to Time-of-Use)_ | ✅ |
 | **11** | _Blind OS Command Injection / Insecure Lua Script_ | ✅ |
-| **12** | _Vulnerability to be defined_ | ⏳ |
+| **12** | _Command Injection / WAF Bypass (Regex & Wildcards)_ | ✅ |
 | **13** | _Vulnerability to be defined_ | ⏳ |
 | **14** | _Vulnerability to be defined_ | ⏳ |
 

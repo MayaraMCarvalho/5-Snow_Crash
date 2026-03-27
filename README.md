@@ -111,7 +111,7 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 | **09** | _Criptografia Fraca Customizada / Engenharia Reversa_ | ✅ |
 | **10** | _Race Condition / TOCTOU (Hora da verificação até a hora de uso)_ | ✅ |
 | **11** | _Injeção de Comando Cega (Blind OS Command Injection) / Lua_ | ✅ |
-| **12** | _Vulnerabilidade a definir_ | ⏳ |
+| **12** | _Injeção de Comando / Bypass de Sanitização (Regex & Wildcards)_ | ✅ |
 | **13** | _Vulnerabilidade a definir_ | ⏳ |
 | **14** | _Vulnerabilidade a definir_ | ⏳ |
 
