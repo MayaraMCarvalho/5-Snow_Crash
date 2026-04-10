@@ -113,9 +113,7 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 | **11** | _Injeção de Comando Cega (Blind OS Command Injection) / Lua_ | ✅ |
 | **12** | _Injeção de Comando / Bypass de Sanitização (Regex & Wildcards)_ | ✅ |
 | **13** | _Engenharia Reversa (Estática e Dinâmica) / Bypass de Autenticação_ | ✅ |
-| **14** | _Vulnerabilidade a definir_ | ⏳ |
-
-> Nota: A tabela será atualizada conforme o progresso no projeto.
+| **14** | _Análise Dinâmica Avançada / Bypass de Anti-Debugging (ptrace)_ | ✅ |
 
 ---
 

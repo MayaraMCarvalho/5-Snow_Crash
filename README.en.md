@@ -113,9 +113,7 @@ Below is a summary of the concepts covered in each completed level:
 | **11** | _Blind OS Command Injection / Insecure Lua Script_ | ✅ |
 | **12** | _Command Injection / WAF Bypass (Regex & Wildcards)_ | ✅ |
 | **13** | _Reverse Engineering (Static & Dynamic) / Authentication Bypass_ | ✅ |
-| **14** | _Vulnerability to be defined_ | ⏳ |
-
-> Note: The table will be updated as the project progresses.
+| **14** | _Advanced Dynamic Analysis / Anti-Debugging Bypass (ptrace)_ | ✅ |
 
 ---
 
