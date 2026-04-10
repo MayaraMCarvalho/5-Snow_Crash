@@ -112,7 +112,7 @@ Below is a summary of the concepts covered in each completed level:
 | **10** | _Race Condition / TOCTOU (Time-of-Check to Time-of-Use)_ | ✅ |
 | **11** | _Blind OS Command Injection / Insecure Lua Script_ | ✅ |
 | **12** | _Command Injection / WAF Bypass (Regex & Wildcards)_ | ✅ |
-| **13** | _Vulnerability to be defined_ | ⏳ |
+| **13** | _Reverse Engineering (Static & Dynamic) / Authentication Bypass_ | ✅ |
 | **14** | _Vulnerability to be defined_ | ⏳ |
 
 > Note: The table will be updated as the project progresses.
