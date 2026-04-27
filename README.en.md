@@ -74,7 +74,7 @@ During the resolution of the challenges, the following tools and technologies ar
 -   **Python / Perl:** For creating injection scripts and byte manipulation.
 -   **Objdump / Strings:** For static analysis of binaries.
 -   **Wireshark:** For network packet analysis (.pcap files).
--   **VirtualBox / VMWare:** For running the project ISO.
+-   **VirtualBox:** For running the project ISO.
 
 ---
 
