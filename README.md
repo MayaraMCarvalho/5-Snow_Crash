@@ -133,15 +133,13 @@ Este projeto requer a ISO específica do Snow Crash fornecida pela 42 (disponív
 
 	> A senha inicial para o level00 é `level00`.
 
-2. **Fluxo de Resolução**
+2. **Fluxo de Resolução** Uma vez logado:
 
-Uma vez logado:
-
-1. Analise os arquivos no diretório home ou `/var/www` etc.
-2. Encontre a vulnerabilidade.
-3. Explore-a para rodar um comando como o usuário `flagXX`.
-4. Execute `getflag`.
-5. Anote a senha e use-a para conectar no próximo nível: `su level01`.
+	1. Analise os arquivos no diretório home ou `/var/www` etc.
+	2. Encontre a vulnerabilidade.
+	3. Explore-a para rodar um comando como o usuário `flagXX`.
+	4. Execute `getflag`.
+	5. Anote a senha e use-a para conectar no próximo nível: `su level01`.
 
 ---
 
