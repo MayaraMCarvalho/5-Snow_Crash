@@ -74,7 +74,7 @@ Durante a resolução dos desafios, as seguintes ferramentas e tecnologias são 
 -   **Python / Perl:** Para criação de scripts de injeção e manipulação de bytes.
 -   **Objdump / Strings:** Para análise estática de binários.
 -   **Wireshark:** Para análise de pacotes de rede (arquivos .pcap).
--   **VirtualBox / VMWare:** Para execução da ISO do projeto.
+-   **VirtualBox:** Para execução da ISO do projeto.
 
 ---
 
