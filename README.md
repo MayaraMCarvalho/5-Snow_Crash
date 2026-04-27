@@ -121,25 +121,27 @@ Abaixo está um resumo dos conceitos abordados em cada nível completado:
 
 Este projeto requer a ISO específica do Snow Crash fornecida pela 42 (disponível na intra). Você deve se conectar à máquina virtual via SSH. A porta padrão do serviço SSH na VM é **4242**.
 
-1. **Conexão Inicial**
+### 1. **Conexão Inicial**
 
-	1. Inicie a VM com a ISO do Snow Crash.
-	2. Identifique o IP da máquina (geralmente exibido no boot ou via ifconfig).
-	3. Conecte-se via SSH na porta 4242:
+1. Inicie a VM com a ISO do Snow Crash.
+2. Identifique o IP da máquina (geralmente exibido no boot ou via ifconfig).
+3. Conecte-se via SSH na porta 4242:
 
-		```bash
-		ssh levelXX@<IP_DA_VM> -p 4242
-		```
+	```bash
+	ssh levelXX@<IP_DA_VM> -p 4242
+	```
 
-	> A senha inicial para o level00 é `level00`.
+> A senha inicial para o level00 é `level00`.
 
-2. **Fluxo de Resolução** Uma vez logado:
+### 2. **Fluxo de Resolução**
 
-	1. Analise os arquivos no diretório home ou `/var/www` etc.
-	2. Encontre a vulnerabilidade.
-	3. Explore-a para rodar um comando como o usuário `flagXX`.
-	4. Execute `getflag`.
-	5. Anote a senha e use-a para conectar no próximo nível: `su level01`.
+Uma vez logado:
+
+1. Analise os arquivos no diretório home ou `/var/www` etc.
+2. Encontre a vulnerabilidade.
+3. Explore-a para rodar um comando como o usuário `flagXX`.
+4. Execute `getflag`.
+5. Anote a senha e use-a para conectar no próximo nível: `su level01`.
 
 ---
 
