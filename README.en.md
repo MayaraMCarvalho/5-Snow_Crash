@@ -6,7 +6,7 @@ Available in: [🇧🇷 Português](README.md)
 ![42 São Paulo](https://img.shields.io/badge/42-São_Paulo-black)
 ![Security](https://img.shields.io/badge/Focus-Cybersecurity-red)
 ![Language](https://img.shields.io/badge/Language-C_/_ASM_/_Python-blue)
-![Status](https://img.shields.io/badge/Status-In_Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Done-green)
 
 This project is a practical introduction to Cybersecurity in a **CTF (Capture The Flag)** format. The goal is to exploit vulnerabilities in a Linux system to escalate privileges, level by level, using reverse engineering, binary exploitation, and scripting techniques.
 
